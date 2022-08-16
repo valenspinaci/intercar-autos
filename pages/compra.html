@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Intercar - Compra</title>
+
+    <!-- Toastify -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="/img/logo-intercar.png">
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/003e8723d4.js" crossorigin="anonymous"></script>
+
+    <!-- CSS Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <!-- CSS Propio -->
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+
+    <!--Navbar-->
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="navbar fixed-top navbar-expand-lg shadow-sm p-3 mb-5 bg-white rounded">
+                <div class="container">
+                    <a class="navbar-brand" href="/index.html"><h1><img src="/img/logo-intercar.png" alt="logo"></h1></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-5">
+                            <li class="nav-item mx-lg-2">
+                                <a class="nav-link boton-navbar" href="/index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item mx-lg-2">
+                                <a class="nav-link boton-navbar" href="#">Comprá</a>
+                            </li>
+                            <li class="nav-item mx-lg-2">
+                                <a class="nav-link boton-navbar" href="/pages/venta.html">Vendé</a>
+                            </li>
+                            <li class="nav-item mx-lg-2">
+                                <a class="nav-link boton-navbar" href="/pages/favoritos.html">Favoritos</a>
+                            </li>
+                            <li class="nav-item mx-lg-2">
+                                <a class="nav-link boton-navbar" href="/pages/contacto.html">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!--Fin navbar-->
+
+    <!--Autos publicados-->
+    <div class="container-fluid d-flex separacion">
+        <div class="d-none d-lg-block col-md-2 mt-5" id="filtros">
+
+            <p class="ms-3">Filtros:</p>
+
+            <!--Filtro por clase-->
+
+            <div class="ms-3 dropdown">
+                <a class="btn btn-dark dropdown-toggle" id="filtrosClase" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Clase
+                </a>
+    
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#" id="claseAuto">Auto</a></li>
+                    <li><a class="dropdown-item" href="#" id="claseCamioneta">Camioneta</a></li>
+                    <li><a class="dropdown-item" href="#" id="claseTodos">Todos</a></li>
+                </ul>
+            </div>
+
+            <!--Filtro por marca-->
+
+            <div class="ms-3 mt-4 dropdown">
+                <a class="btn btn-dark dropdown-toggle" id="filtrosMarca" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Marca
+                </a>
+    
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#" id="marcaAudi">Audi</a></li>
+                    <li><a class="dropdown-item" href="#" id="marcaBMW">BMW</a></li>
+                    <li><a class="dropdown-item" href="#" id="marcaChevrolet">Chevrolet</a></li>
+                    <li><a class="dropdown-item" href="#" id="marcaFiat">Fiat</a></li>
+                    <li><a class="dropdown-item" href="#" id="marcaFord">Ford</a></li>
+                    <li><a class="dropdown-item" href="#" id="marcaHonda">Honda</a></li>
+                    <li><a class="dropdown-item" href="#" id="marcaMercedes">Mercedes Benz</a></li>
+                    <li><a class="dropdown-item" href="#" id="marcaNissan">Nissan</a></li>
+                    <li><a class="dropdown-item" href="#" id="marcaRenault">Renault</a></li>
+                    <li><a class="dropdown-item" href="#" id="marcaToyota">Toyota</a></li>
+                    <li><a class="dropdown-item" href="#" id="marcaVolkswagen">Volkswagen</a></li>
+                    <li><a class="dropdown-item" href="#" id="marcaTodos">Todos</a></li>
+                </ul>
+            </div>
+
+            <!--Filtro por modelo-->
+
+            <div class="ms-3 mt-4 dropdown">
+                <a class="btn btn-dark dropdown-toggle" id="filtrosModelo" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Modelo
+                </a>
+    
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#" id="modelo2012">2012</a></li>
+                    <li><a class="dropdown-item" href="#" id="modelo2013">2013</a></li>
+                    <li><a class="dropdown-item" href="#" id="modelo2014">2014</a></li>
+                    <li><a class="dropdown-item" href="#" id="modelo2015">2015</a></li>
+                    <li><a class="dropdown-item" href="#" id="modelo2016">2016</a></li>
+                    <li><a class="dropdown-item" href="#" id="modelo2017">2017</a></li>
+                    <li><a class="dropdown-item" href="#" id="modelo2018">2018</a></li>
+                    <li><a class="dropdown-item" href="#" id="modelo2019">2019</a></li>
+                    <li><a class="dropdown-item" href="#" id="modelo2020">2020</a></li>
+                    <li><a class="dropdown-item" href="#" id="modelo2021">2021</a></li>
+                    <li><a class="dropdown-item" href="#" id="modelo2022">2022</a></li>
+                    <li><a class="dropdown-item" href="#" id="modeloTodos">Todos</a></li>
+                </ul>
+            </div>
+
+            <!--Filtro por valor-->
+
+            <div class="ms-3 mt-4 dropdown">
+                <a class="btn btn-dark dropdown-toggle" id="filtrosModelo" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Valor
+                </a>
+    
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#" id="valor1">$2000000 - $3000000</a></li>
+                    <li><a class="dropdown-item" href="#" id="valor2">$3000000 - $4000000</a></li>
+                    <li><a class="dropdown-item" href="#" id="valor3">$4000000 - $5000000</a></li>
+                    <li><a class="dropdown-item" href="#" id="valor4">$5000000 - $6000000</a></li>
+                    <li><a class="dropdown-item" href="#" id="valor5">$6000000 - $7000000</a></li>
+                    <li><a class="dropdown-item" href="#" id="valor6">más de $7000000</a></li>
+                    <li><a class="dropdown-item" href="#" id="valorTodos">Todos</a></li>
+                </ul>
+            </div>
+
+            <!--<div class="col mt-5" id="filtrosValor">
+                <div class="form-check">
+                    <p class="text-decoration-underline mt-3">Valor:</p>
+                    <input class="form-check-input ms-3" type="radio" name="flexRadioDefault4" id="valor1">
+                    <label class="form-check-label ms-2" for="valor1">
+                        $2000000 - $3000000
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input ms-3" type="radio" name="flexRadioDefault4" id="valor2">
+                    <label class="form-check-label ms-2" for="valor2">
+                        $3000000 - $4000000
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input ms-3" type="radio" name="flexRadioDefault4" id="valor3">
+                    <label class="form-check-label ms-2" for="valor3">
+                        $4000000 - $5000000
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input ms-3" type="radio" name="flexRadioDefault4" id="valor4">
+                    <label class="form-check-label ms-2" for="valor4">
+                        $5000000 - $6000000
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input ms-3" type="radio" name="flexRadioDefault4" id="valor5">
+                    <label class="form-check-label ms-2" for="valor5">
+                        $6000000 - $7000000
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input ms-3" type="radio" name="flexRadioDefault4" id="valor6">
+                    <label class="form-check-label ms-2" for="valor6">
+                        más de $7000000
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input ms-3" type="radio" name="flexRadioDefault4" id="valorTodos" checked>
+                    <label class="form-check-label ms-2" for="valorTodos">
+                        Todos
+                    </label>
+                </div>
+            </div>-->
+        </div>
+
+        <div class="row mx-auto mb-3 gap-1">
+        <div class="d-flex justify-content-between">
+            <h1 class="text-black-50 my-3 fs-6 fw-semibold">Resultados arrojados: <span class="fw-lighter" id="cantidadArrojada"></span></h1>
+            <div class="dropdown me-5">
+                <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Ordenar por
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" id="mayorMenor" href="#">de mayor precio a menor</a></li>
+                    <li><a class="dropdown-item" id="menorMayor" href="#">de menor precio a mayor</a></li>
+                    <li><a class="dropdown-item" id="antiguoNuevo" href="#">de mayor antigüedad a menor</a></li>
+                    <li><a class="dropdown-item" id="nuevoAntiguo" href="#">de menor antigüedad a mayor</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+
+        <div id="vehiculosPublicados" class="row mx-auto mb-3 gap-1">
+        </div>
+        </div>
+    </div>
+
+    <!--Fin autos publicados-->
+
+    <!--Boton ayuda-->
+    <a href="faqs.html" class="d-none d-md-block boton_subir fw-bold text-decoration-none"><i class="fa-solid fa-info me-3"></i>Ayuda</a>
+    <!--Fin boton ayuda-->
+
+    <!-- Footer -->
+
+<footer>
+    <div class="container-fluid bg-light">
+        <div class="container">
+            <div class="row d-flex flex-md-row-reverse">
+
+                <!--Redes sociales-->
+                <div class="col-12 col-md-6 my-4 my-md-0 d-flex justify-content-center justify-content-md-end align-items-center">
+                    <a href="https://www.instagram.com/" target="_blank"><i
+                            class="fa-brands fa-instagram iconos mx-3"></i></a>
+                    <a href="https://twitter.com/?lang=es" target="_blank"><i
+                            class="fa-brands fa-twitter iconos mx-3"></i></a>
+                    <a href="https://www.facebook.com/" target="_blank"><i
+                            class="fa-brands fa-facebook-f iconos mx-3"></i></a>
+                    <a href="https://ar.linkedin.com/" target="_blank"><i
+                            class="fa-brands fa-linkedin-in iconos mx-3"></i></a>
+                </div>
+
+                <hr class="d-block d-md-none">
+
+                <!--Datos-->
+                <div class="col-12 col-md-6 my-3 d-flex justify-content-center justify-content-md-start">
+                    <ul class="texto-lista text-center text-md-start">
+                        <li class="my-2">Descargá nuestra App</li>
+                        <li class="my-2"><a class="color-links" href="https://www.apple.com/la/app-store/">App Store</a></li>
+                        <li class="my-2"><a class="color-links" href="https://play.google.com/store/games?hl=es_AR">Google Play</a></li>
+                        <li class="my-2">Valentino Spinaci</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--Derechos reservados-->
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center mt-md-1 mb-1">
+                    <p class="texto-derechos text-center">Todos los derechos reservados - Intercar Autos
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Fin footer -->
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+    </script>
+
+    <!-- SweetAlert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Toastify -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <!-- Script Propio -->
+    <script src="../js/compra.js"></script>
+</body>
+
+</html>

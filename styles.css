@@ -1,0 +1,138 @@
+body{
+    font-family: 'Quicksand', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.boton-navbar{
+    color: #333333;
+}
+
+.boton-navbar:hover{
+    font-weight: bold;
+}
+
+.encabezado{
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.encabezado-blanco{
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.separacion{
+    margin-top: 12rem;
+}
+
+.parrafo{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 400;
+}
+
+.parrafo-blanco{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: white;
+}
+
+.parrafo span{
+    font-weight: bold;
+}
+
+.parrafo-blanco span{
+    font-weight: bold;
+}
+
+.banner2{
+    background: url(img/interior-auto.jpg)  50% 100px no-repeat fixed;
+    background-size: cover;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.banner2 p a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.color-fondo{
+    background-color: #c7c7c7;
+}
+
+.iconos {
+    font-size: 2rem;
+    color: #333333;
+}
+
+.iconos:hover {
+    color: black;
+    transition: .5s;
+}
+
+.texto-lista{
+    list-style-type: none;
+}
+
+.texto-lista{
+    font-weight: bold;
+}
+
+.texto-derechos{
+    font-weight: bold;
+    font-size: 1.15rem;
+}
+
+.color-links{
+    color: #333333;
+}
+
+.color-links:hover{
+    color: black;
+}
+
+.boton_subir{
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    font-size: .90rem;
+    color: white;
+    background-color: #333333;
+    border-radius: 1rem;
+    padding: 0.25rem 1rem;
+}
+
+.boton_subir:hover{
+    background-color: black;
+    color: white;
+    transition: ease 0.5s;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+.alto{
+    height: 75vh;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px){
+    .encabezado{
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    .encabezado{
+        font-size: 2.15rem;
+    }
+}
+
